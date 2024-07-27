@@ -16,17 +16,12 @@ const Edit = () => {
 
   }
   const navigate=useNavigate()
-  // const Submit=(e)=>
-  // {
-    
-      
-  //     console.log(newarray);
-  // }
+  
   const Update=(e)=>{
     e.preventDefault()
     const newarray=[...employee]
     if(edit){
-      const index=employee.findIndex(item=>item.id===edit.id)
+      const index= employee.findIndex(item=>item.id===edit.id)
       if(index!==-1){
         newarray[index]={...edit,...data}
       }
@@ -39,7 +34,7 @@ const Edit = () => {
   }
   return (
     <div><Form style={{width:"50%", margin:"auto"}} 
-    // onSubmit={Submit}
+    
     >
     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
       <Form.Label>ID</Form.Label>
